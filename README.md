@@ -13,3 +13,8 @@ This project is made possible by [Gints Murāns' OFX parsers for Latvian banks](
 The example above assumes that
 - You have a folder named data which can be linked as volume to the docker container (needed to give ofxstatement access to that file)
 - You have downloaded a .csv statement from Latvian swedbank in said folder
+
+### Example for Citadele
+```
+ docker run -v ~/dev/ofx/data:/data fntm/ofxstatement-lv ofxstatement convert -t citadeleLV /data/statement.xml /data/citadele.ofx
+ ```
