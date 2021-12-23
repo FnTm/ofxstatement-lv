@@ -32,3 +32,26 @@ The example above assumes that
 ```
  docker run -v ~/dev/ofx/data:/data fntm/ofxstatement-lv ofxstatement convert -t revolut /data/revolut.csv /data/revolut.ofx
  ```
+
+## Publishing a new release
+1. Tag relevant release commit with release version.
+   ```bash
+    git tag -a v1.1 -m "Parse latest Revolut CSV export format"
+    ```
+2. Push commit and tags to github
+   ```bash
+    git push origin master --tags
+    ```
+3. Create a new release in [Github repo Releases](https://github.com/FnTm/ofxstatement-lv/releases/new)
+4. Build new Docker images
+   ```bash
+    docker build --platform=amd64 -f Dockerfile -t fntm/ofxstatement-lv:v1.1 -t fntm/ofxstatement-lv:latest .
+    ```
+5. Log into Dockerhub
+   ```bash
+    docker login
+    ```
+6. Push latest tagged builds up to Dockerhub
+   ```bash
+    docker push fntm/ofxstatement-lv:latest
+    ```
