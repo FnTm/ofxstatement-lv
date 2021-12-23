@@ -1,3 +1,5 @@
-ofxstatement
-ofxstatement-latvian
-ofxstatement-revolut
+ofxstatement==0.8.0
+# gintsmurans/ofxstatement-latvian
+https://github.com/gintsmurans/ofxstatement-latvian/archive/9d3ddce8fb8bb51c7949f963065ebf2cd5ae31ad.zip
+# ofxstatement-revolut==2.0.0 (contains parser for latest revolut CSV export format)
+https://github.com/mlaitinen/ofxstatement-revolut/archive/946ca2e3eafde22f86d4e4382a4d803aae472c92.zip
